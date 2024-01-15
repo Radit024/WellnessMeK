@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="meditationHomeVM" type="com.wellnessmeandro.app.modules.meditationhome.data.viewmodel.MeditationHomeVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearFourteen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_30pxh"
+            android:layout_marginStart="@dimen/_30pxh"
+            android:layout_marginTop="@dimen/_40pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearHeader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_deep_purple_700_radius_8"
+                    android:id="@+id/btnArrowleft"
+                    android:layout_height="@dimen/_32pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:paddingHorizontal="@dimen/_11pxh"
+                    android:paddingVertical="@dimen/_11pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_arrowleft_white_a700" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMeditationRe"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_4pxv"
+                    android:layout_marginStart="@dimen/_42pxh"
+                    android:layout_marginTop="@dimen/_3pxv"
+                    android:layout_weight="0.86"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:singleLine="true"
+                    android:text="@{meditationHomeVM.meditationHomeModel.txtMeditationRe}"
+                    style="@style/txtPoppinsbold16" tools:text="@string/msg_meditation_re2"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <FrameLayout android:id="@+id/frameStackrectangle5828"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_529pxv"
+            android:layout_marginBottom="@dimen/_159pxv"
+            android:layout_marginEnd="@dimen/_15pxh"
+            android:layout_marginStart="@dimen/_30pxh"
+            android:layout_marginTop="@dimen/_51pxv" android:layout_width="@dimen/_330pxh">
+            <View
+                android:background="@drawable/rectangle_bg_deep_purple_700_6c_radius_22"
+                android:id="@+id/viewRectangle5828"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_140pxv"
+                android:layout_marginBottom="@dimen/_191pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_191pxv" android:layout_width="@dimen/_315pxh"/>
+            <View
+                android:background="@drawable/rectangle_bg_deep_purple_a100_6c_radius_22"
+                android:id="@+id/viewRectangle5828One"
+                android:layout_gravity="top|start"
+                android:layout_height="@dimen/_140pxv"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginEnd="@dimen/_10pxh" android:layout_width="@dimen/_315pxh"/>
+            <LinearLayout android:id="@+id/linearColumnplay"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_8pxv"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowletsmeditatio"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_17pxh"
+                    android:layout_marginStart="@dimen/_19pxh"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnletsmeditatio"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.74"
+                        android:layout_width="0dp" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLetsMeditatio"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_marginStart="@dimen/_1pxh"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{meditationHomeVM.meditationHomeModel.txtLetsMeditatio}"
+                            style="@style/txtAlegreyamedium25" tools:text="@string/msg_let_s_meditatio"/>
+                        <TextView android:id="@+id/txtCalmyourmind"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_marginStart="@dimen/_4pxh"
+                            android:layout_width="match_parent"
+                            android:text="@{meditationHomeVM.meditationHomeModel.txtCalmyourmind}"
+                            style="@style/txtAlegreyaSansmedium15" tools:text="@string/msg_calm_your_mind"/>
+                        <EditText
+                            android:background="@drawable/rectangle_bg_deep_purple_700_radius_10"
+                            android:drawableEnd="@drawable/img_play"
+                            android:drawablePadding="@dimen/_26pxh"
+                            android:ellipsize="end"
+                            android:hint="@string/lbl_try_now"
+                            android:id="@+id/etLanguage"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_marginTop="@dimen/_8pxv"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_3pxh"
+                            android:paddingBottom="@dimen/_8pxv"
+                            android:paddingEnd="@dimen/_20pxh"
+                            android:paddingStart="@dimen/_12pxh"
+                            android:paddingTop="@dimen/_9pxv"
+                            android:singleLine="true"
+                            android:text="@={meditationHomeVM.meditationHomeModel.etLanguageValue}"
+                            android:textColorHint="@color/white_A700"
+                            style="@style/etSolidRounded" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameFocusMood"
+                        android:layout_height="@dimen/_80pxv"
+                        android:layout_marginBottom="@dimen/_7pxv"
+                        android:layout_marginTop="@dimen/_26pxv"
+                        android:layout_width="@dimen/_71pxh" style="@style/groupStylewhite_2">
+                        <ImageView android:id="@+id/imagePlay"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_43pxh"
+                            android:layout_marginBottom="@dimen/_18pxv"
+                            android:layout_marginEnd="@dimen/_16pxh"
+                            android:layout_marginStart="@dimen/_14pxh"
+                            android:layout_marginTop="@dimen/_18pxv"
+                            android:layout_width="@dimen/_40pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_play_deep_purple_700"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_play_deep_purple_700"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <FrameLayout android:id="@+id/frameStacklanguageOne"
+                    android:layout_gravity="end"
+                    android:layout_height="@dimen/_129pxv"
+                    android:layout_marginEnd="@dimen/_4pxh"
+                    android:layout_marginStart="@dimen/_19pxh"
+                    android:layout_marginTop="@dimen/_74pxv" android:layout_width="@dimen/_292pxh">
+                    <EditText
+                        android:background="@drawable/rectangle_bg_deep_purple_700_radius_10"
+                        android:drawableEnd="@drawable/img_contrast"
+                        android:drawablePadding="@dimen/_16pxh"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_listen_now"
+                        android:id="@+id/etLanguageOne"
+                        android:inputType="text"
+                        android:layout_gravity="bottom|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10pxv"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_3pxh"
+                        android:paddingBottom="@dimen/_10pxv"
+                        android:paddingEnd="@dimen/_19pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_7pxv"
+                        android:singleLine="true"
+                        android:text="@={meditationHomeVM.meditationHomeModel.etLanguageOneValue}"
+                        android:textColorHint="@color/white_A700"
+                        style="@style/etSolidRounded" tools:ignore="Autofill"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtRelaxSound"
+                        android:layout_gravity="top|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10pxv"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_7pxv"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{meditationHomeVM.meditationHomeModel.txtRelaxSound}"
+                        style="@style/txtAlegreyamedium25" tools:text="@string/lbl_relax_sound"/>
+                    <FrameLayout
+                        android:id="@+id/frameStackcalmyourmindOne"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_129pxv"
+                        android:layout_marginStart="@dimen/_1pxh" android:layout_width="@dimen/_291pxh">
+                        <TextView android:gravity="top|start"
+                            android:id="@+id/txtCalmyourmindOne"
+                            android:layout_gravity="top|start"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_40pxv"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_marginTop="@dimen/_40pxv"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_3pxh"
+                            android:text="@{meditationHomeVM.meditationHomeModel.txtCalmyourmindOne}"
+                            style="@style/txtAlegreyaSansmedium15_1" tools:text="@string/msg_calm_your_mind2"/>
+                        <ImageView android:id="@+id/image2831156removeb"
+                            android:layout_gravity="end"
+                            android:layout_height="@dimen/_129pxh"
+                            android:layout_marginStart="@dimen/_10pxh"
+                            android:layout_width="@dimen/_129pxh"
+                            android:scaleType="fitXY"
+                            imageRes="@{@drawable/img_2831156removeb}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_2831156removeb"/>
+                    </FrameLayout>
+                </FrameLayout>
+                <LinearLayout android:id="@+id/linearColumnmeditation"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_48pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical" style="@style/groupStyledeep_purple_300cornerRadius">
+                    <FrameLayout
+                        android:id="@+id/frameStacktechniquesben"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_72pxv"
+                        android:layout_marginEnd="@dimen/_28pxh"
+                        android:layout_marginStart="@dimen/_28pxh"
+                        android:layout_marginTop="@dimen/_13pxv" android:layout_width="@dimen/_143pxh">
+                        <FrameLayout
+                            android:id="@+id/frameStackmeditation"
+                            android:layout_gravity="top|start"
+                            android:layout_height="@dimen/_35pxv"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:layout_marginEnd="@dimen/_10pxh" android:layout_width="@dimen/_115pxh">
+                            <TextView android:ellipsize="end"
+                                android:gravity="top|start"
+                                android:id="@+id/txtMeditation"
+                                android:layout_gravity="start"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{meditationHomeVM.meditationHomeModel.txtMeditation}"
+                                style="@style/txtAlegreyamedium25_1" tools:text="@string/lbl_meditation"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="top|start"
+                                android:id="@+id/txtMeditationOne"
+                                android:layout_gravity="start"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{meditationHomeVM.meditationHomeModel.txtMeditationOne}"
+                                style="@style/txtAlegreyamedium25" tools:text="@string/lbl_meditation"/>
+                        </FrameLayout>
+                        <TextView android:gravity="top|start"
+                            android:id="@+id/txtTechniquesBen"
+                            android:layout_gravity="bottom|start"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10pxv"
+                            android:layout_width="match_parent"
+                            android:text="@{meditationHomeVM.meditationHomeModel.txtTechniquesBen}"
+                            style="@style/txtAlegreyaSansmedium15" tools:text="@string/msg_techniques_ben"/>
+                    </FrameLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearRowwatchnow"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_20pxv"
+                        android:layout_marginEnd="@dimen/_19pxh"
+                        android:layout_marginStart="@dimen/_19pxh"
+                        android:layout_marginTop="@dimen/_13pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <LinearLayout android:id="@+id/linearWatchNow"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.71"
+                            android:layout_width="0dp"
+                            android:orientation="horizontal" style="@style/groupStyledeep_purple_1">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtWatchNow"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_7pxv"
+                                android:layout_marginStart="@dimen/_9pxh"
+                                android:layout_marginTop="@dimen/_9pxv"
+                                android:layout_weight="0.85"
+                                android:layout_width="0dp"
+                                android:lineSpacingExtra="@dimen/_3pxh"
+                                android:singleLine="true"
+                                android:text="@{meditationHomeVM.meditationHomeModel.txtWatchNow}"
+                                style="@style/txtAlegreyaSansmedium15" tools:text="@string/lbl_watch_now"/>
+                            <ImageView
+                                android:id="@+id/imageOverflowmenu"
+                                android:layout_height="@dimen/_11pxh"
+                                android:layout_marginBottom="@dimen/_11pxv"
+                                android:layout_marginEnd="@dimen/_25pxh"
+                                android:layout_marginStart="@dimen/_13pxh"
+                                android:layout_marginTop="@dimen/_11pxv"
+                                android:layout_width="@dimen/_12pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_overflowmenu"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_overflowmenu"/>
+                        </LinearLayout>
+                        <View
+                            android:background="@color/deep_purple_100"
+                            android:id="@+id/viewRectangleFortyThree"
+                            android:layout_height="@dimen/_7pxv"
+                            android:layout_marginBottom="@dimen/_18pxv"
+                            android:layout_marginStart="@dimen/_62pxh"
+                            android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_52pxh"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:id="@+id/image2844687removeb"
+                android:layout_gravity="bottom|end"
+                android:layout_height="@dimen/_111pxh"
+                android:layout_marginBottom="@dimen/_29pxv"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_29pxv"
+                android:layout_width="@dimen/_166pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_2844687removeb}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_2844687removeb"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

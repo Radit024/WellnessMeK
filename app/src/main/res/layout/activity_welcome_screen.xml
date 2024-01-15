@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="welcomeScreenVM" type="com.wellnessmeandro.app.modules.welcomescreen.data.viewmodel.WelcomeScreenVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearZero"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_902">
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtWellNessMe"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_149pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{welcomeScreenVM.welcomeScreenModel.txtWellNessMe}"
+            style="@style/txtUrbanistromanextrabold40" tools:text="@string/lbl_wellnessme"/>
+        <FrameLayout android:id="@+id/frameStackshadow"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_332pxv"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_66pxv" android:layout_width="@dimen/_350pxh">
+            <View
+                android:background="@drawable/rectangle_bg_indigo_a200_radius_11_475"
+                android:id="@+id/viewShadow"
+                android:layout_gravity="bottom|center"
+                android:layout_height="@dimen/_22pxv"
+                android:layout_marginBottom="@dimen/_98pxv"
+                android:layout_marginEnd="@dimen/_23pxh"
+                android:layout_marginStart="@dimen/_23pxh"
+                android:layout_marginTop="@dimen/_98pxv" android:layout_width="@dimen/_298pxh"/>
+            <ImageView android:id="@+id/imageImg"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_332pxh"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_img"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_img"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtTHESENGKUNI"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_79pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{welcomeScreenVM.welcomeScreenModel.txtTHESENGKUNI}"
+            style="@style/txtUrbanistromanextrabold16" tools:text="@string/lbl_the_sengkuni"/>
+        <ImageView android:id="@+id/imageBackground"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_83pxh"
+            android:layout_marginEnd="@dimen/_2pxh"
+            android:layout_marginTop="@dimen/_33pxv"
+            android:layout_width="@dimen/_373pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_background}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_background"/>
+    </LinearLayout>
+</layout>
