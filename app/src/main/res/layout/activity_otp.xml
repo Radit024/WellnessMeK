@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="otpVM" type="com.wellnessmeandro.app.modules.otp.data.viewmodel.OtpVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameFour"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylegray_902">
+        <LinearLayout android:id="@+id/linearColumnsignintofreu"
+            android:layout_gravity="top|center"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_173pxv"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_10pxh"
+            android:layout_marginTop="@dimen/_173pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtSignInTofreu"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_51pxh"
+                android:layout_marginStart="@dimen/_51pxh"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:singleLine="true"
+                android:text="@{otpVM.otpModel.txtSignInTofreu}"
+                style="@style/txtUrbanistextrabold30" tools:text="@string/msg_find_your_accou"/>
+            <TextView android:gravity="start"
+                android:id="@+id/txtEnterthecode"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_41pxv"
+                android:layout_width="match_parent"
+                android:text="@{otpVM.otpModel.txtEnterthecode}"
+                style="@style/txtUrbanistextrabold16" tools:text="@string/msg_enter_the_code"/>
+            <LinearLayout android:id="@+id/linearRowrectanglethirtynine"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12pxh"
+                android:layout_marginStart="@dimen/_5pxh"
+                android:layout_marginTop="@dimen/_68pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <View android:background="@color/white_A700"
+                    android:id="@+id/viewRectangleThirtyNine"
+                    android:layout_height="@dimen/_36pxv" android:layout_width="@dimen/_89pxh"/>
+                <View android:background="@color/white_A700"
+                    android:id="@+id/lineLineOne"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_marginBottom="@dimen/_18pxv"
+                    android:layout_marginStart="@dimen/_11pxh"
+                    android:layout_marginTop="@dimen/_17pxv"
+                    android:layout_weight="0.06" android:layout_width="0dp"/>
+                <View android:background="@color/white_A700"
+                    android:id="@+id/viewRectangleThirtyEight"
+                    android:layout_height="@dimen/_36pxv"
+                    android:layout_marginStart="@dimen/_6pxh" android:layout_width="@dimen/_89pxh"/>
+                <View android:background="@color/white_A700"
+                    android:id="@+id/viewLineTwo"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_marginBottom="@dimen/_18pxv"
+                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_18pxh"/>
+                <View android:background="@color/white_A700"
+                    android:id="@+id/viewRectangleForty"
+                    android:layout_height="@dimen/_36pxv"
+                    android:layout_marginStart="@dimen/_5pxh" android:layout_width="@dimen/_89pxh"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearButtonPrimary"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_28pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStyledeep_purple_2">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearContent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_16pxv"
+                    android:layout_marginEnd="@dimen/_121pxh"
+                    android:layout_marginStart="@dimen/_121pxh"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStyledeep_purple_700">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtText"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="0.78"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{otpVM.otpModel.txtText}"
+                        style="@style/txtUrbanistextrabold18" tools:text="@string/lbl_confirm"/>
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_height="@dimen/_12pxh"
+                        android:layout_marginBottom="@dimen/_6pxv"
+                        android:layout_marginEnd="@dimen/_3pxh"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_6pxv"
+                        android:layout_width="@dimen/_19pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

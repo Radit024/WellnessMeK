@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="signInVM" type="com.wellnessmeandro.app.modules.signin.data.viewmodel.SignInVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_902">
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtSignInToWell"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_137pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_6pxh"
+            android:singleLine="true"
+            android:text="@{signInVM.signInModel.txtSignInToWell}"
+            style="@style/txtUrbanistextrabold30" tools:text="@string/msg_sign_in_to_well"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtEmailAddress"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_45pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{signInVM.signInModel.txtEmailAddress}"
+            style="@style/txtUrbanistextrabold14" tools:text="@string/lbl_email_address"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="@string/lbl_a"
+            android:id="@+id/textInputLayContent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="match_parent"
+            android:textColorHint="@color/black_900" style="@style/txtSolidRoundedOutline">
+            <com.google.android.material.textfield.TextInputEditText
+                android:ellipsize="end" android:id="@+id/etContent"
+                android:inputType="textEmailAddress"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true" android:text="@={signInVM.signInModel.etContentValue}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtEmailAddressOne"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_23pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{signInVM.signInModel.txtEmailAddressOne}"
+            style="@style/txtUrbanistextrabold14" tools:text="@string/lbl_password"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:hint="@string/lbl_b"
+            android:id="@+id/textInputLayContent1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="match_parent"
+            android:textColorHint="@color/black_900" style="@style/txtSolidRounded">
+            <com.google.android.material.textfield.TextInputEditText
+                android:ellipsize="end" android:id="@+id/etContent1"
+                android:inputType="textPassword"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true" android:text="@={signInVM.signInModel.etContent1Value}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearContent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_13pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStyledeep_purple_2">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTextTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15pxv"
+                android:layout_marginStart="@dimen/_125pxh"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_weight="0.75" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{signInVM.signInModel.txtTextTwo}"
+                style="@style/txtUrbanistextrabold18" tools:text="@string/lbl_sign_in"/>
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="@dimen/_12pxh"
+                android:layout_marginBottom="@dimen/_22pxv"
+                android:layout_marginEnd="@dimen/_128pxh"
+                android:layout_marginStart="@dimen/_18pxh"
+                android:layout_marginTop="@dimen/_22pxv"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageFrame"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_56pxh"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_48pxv"
+            android:layout_width="@dimen/_120pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_frame}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_frame"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtConfirmation"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_49pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{signInVM.signInModel.txtConfirmation}"
+            style="@style/txtUrbanistbold14" tools:text="@string/msg_don_t_have_an_a"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtForgotPassword"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_14pxh"
+            android:layout_marginStart="@dimen/_14pxh"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{signInVM.signInModel.txtForgotPassword}"
+            style="@style/txtUrbanistbold14_1" textUnderline="true" tools:text="@string/lbl_forgot_password"/>
+    </LinearLayout>
+</layout>

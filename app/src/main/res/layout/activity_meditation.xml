@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="meditationVM" type="com.wellnessmeandro.app.modules.meditation.data.viewmodel.MeditationVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFifteen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_900">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_30pxh"
+            android:layout_marginStart="@dimen/_30pxh"
+            android:layout_marginTop="@dimen/_40pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearHeader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_deep_purple_700_radius_8"
+                    android:id="@+id/btnArrowleft"
+                    android:layout_height="@dimen/_32pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:paddingHorizontal="@dimen/_11pxh"
+                    android:paddingVertical="@dimen/_11pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_arrowleft_white_a700" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMeditationRe"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_4pxv"
+                    android:layout_marginStart="@dimen/_43pxh"
+                    android:layout_marginTop="@dimen/_3pxv"
+                    android:layout_weight="0.86"
+                    android:layout_width="0dp"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:singleLine="true"
+                    android:text="@{meditationVM.meditationModel.txtMeditationRe}"
+                    style="@style/txtPoppinsbold16" tools:text="@string/msg_meditation_re2"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <TextView android:ellipsize="end" android:id="@+id/txtTitle"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_30pxh"
+            android:layout_marginStart="@dimen/_30pxh"
+            android:layout_marginTop="@dimen/_41pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{meditationVM.meditationModel.txtTitle}"
+            style="@style/txtAlegreyamedium35" tools:text="@string/lbl_meditation"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_30pxh"
+            android:layout_marginStart="@dimen/_30pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_width="match_parent"
+            android:text="@{meditationVM.meditationModel.txtDescription}"
+            style="@style/txt" tools:text="@string/msg_guided_by_a_sho"/>
+        <ImageView android:id="@+id/imageCharactermedit"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_217pxh"
+            android:layout_marginEnd="@dimen/_30pxh"
+            android:layout_marginStart="@dimen/_30pxh"
+            android:layout_marginTop="@dimen/_36pxv"
+            android:layout_width="@dimen/_283pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_charactermedit"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_charactermedit"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtTime"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_30pxh"
+            android:layout_marginStart="@dimen/_30pxh"
+            android:layout_marginTop="@dimen/_23pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{meditationVM.meditationModel.txtTime}"
+            style="@style/txtAlegreyaSansregular38" tools:text="@string/lbl_45_00"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnStartNow"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_87pxh"
+            android:layout_marginStart="@dimen/_87pxh"
+            android:layout_marginTop="@dimen/_38pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@string/lbl_start_now"
+            android:textAllCaps="false" style="@style/btnSolidRounded_3" tools:text="@string/lbl_start_now"/>
+    </LinearLayout>
+</layout>
